@@ -5,6 +5,10 @@ node ('JDK8'){
     }
     stage ('Build the code') {
         sh 'mvn clean package'
-    }  
+    } 
+    stage ('Archiving and Test Result'){
+        junit '/gameoflife-web/target/surefire-reports/*.xml'
+        archiveArtifacts artifacts: '/gameoflife-web/target/*.war', followSymlinks: false
+} 
 }
 

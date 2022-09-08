@@ -8,6 +8,5 @@ node ('JDK8'){
     }
     stage ('Archiving and Test Result'){
         junit '//**surefire-reports/*.xml'
-        archiveArtifacts artifacts: '**/*.war', followSymlinks: false
 }
 }

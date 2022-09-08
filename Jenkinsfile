@@ -5,8 +5,6 @@ node ('JDK8'){
     }
     stage ('Build the code') {
         sh 'mvn clean package'
-    }
-    stage ('Archiving and Test Result'){
-        junit '//**surefire-reports/*.xml'
+    }  
 }
-}
+

@@ -1,7 +1,8 @@
 pipeline {
 agent { label 'JDK8' }
+triggers { pollSCM('* * * * *') }
 stages {
-       stage (source code) {
+       stage ('source code') {
        steps {
              git branch: 'sprint1_devlope', url: 'https://github.com/Sandip090/game-of-life.git'
 	     }

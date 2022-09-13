@@ -16,7 +16,7 @@ stages {
      stage ('Archive and Test results') {
      steps {
            junit '**/surefire-reports/*.xml'
-	   archiveArtifacts artifacts: '**/*.war', followsymlinks: false
+	   archiveArtifacts artifacts: '**/*.war', followSymlinks: false
 	   }
 	   }
 	   }
